@@ -6,6 +6,7 @@ import com.fasterxml.jackson.databind.ObjectMapper;
 public class ConverteDados implements IConverteDados {
     private ObjectMapper mapper = new ObjectMapper();
 
+    //recebe um dado de tipo genérico, retornando um tipo genérico e transforma o JSON recebido no tipo enviado no segundo parâmetro
     @Override
     public <T> T obterDados(String json, Class<T> classe) {
         try {
